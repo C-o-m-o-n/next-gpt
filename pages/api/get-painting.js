@@ -7,7 +7,7 @@ const openai = new OpenAIApi(configuration)
 export default async function handler(req, res) {
   if (typeof req.body.prompt === "string") {
     const response = await openai.createImage({
-      prompt: `A wet on wet oil painting of ${req.body.prompt} by Bob Ross.`,
+      prompt: `${req.body.prompt} .`,
       n: 1,
       size: "512x512"
     })
