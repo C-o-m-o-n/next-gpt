@@ -7,11 +7,7 @@ const openai = new OpenAIApi(configuration)
 export default async function handler(req, res) {
   if (typeof req.body.prompt === "string") {
     const response = await openai.createImage({
-<<<<<<< HEAD
-      prompt: `${req.body.prompt} .`,
-=======
       prompt: `${req.body.prompt}`,
->>>>>>> 63e4226 (changed the api key again2)
       n: 1,
       size: "512x512"
     })
