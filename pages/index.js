@@ -29,6 +29,10 @@ export default function MyPage() {
   return (
     <div className="container">
       <h1>Give Any Instruction</h1>
+      <div>
+      <h1>Example:</h1>
+      <p>Write me an essay about my the origin of the earth</p>
+      </div>
       <form className="our-form" onSubmit={handleSubmit}>
         <input className="prompt-field" type="text" onChange={handleChange} />
         <button className="prompt-button">Go!</button>
