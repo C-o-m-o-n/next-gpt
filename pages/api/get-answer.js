@@ -9,12 +9,8 @@ export default async function handler(req, res) {
     const response = await openai.createCompletion({
       model: "text-davinci-003",
       prompt: req.body.prompt,
-      temperature: 5,
+      temperature: 0,
       max_tokens: 1000,
-      top_p: 1.0,
-      frequency_penalty: 0.5,
-      presence_penalty: 0.0,
-      stop: ["You:"],
     })
 
     res.status(200).json({ text: response.data.choices[0].text })
