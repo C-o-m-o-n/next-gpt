@@ -33,14 +33,16 @@ export default function MyPage() {
       <h1>Example:</h1>
       <p>Write me an essay about my the origin of the earth</p>
       </div>
+
+      {isLoading && <div className="loading-spinner"></div>}
+
+      <div className="answer-area">{answer}</div>
+      
       <form className="our-form" onSubmit={handleSubmit}>
         <input className="prompt-field" type="text" onChange={handleChange} />
         <button className="prompt-button">Go!</button>
       </form>
 
-      {isLoading && <div className="loading-spinner"></div>}
-
-      <div className="answer-area">{answer}</div>
     </div>
   )
 }
